@@ -79,6 +79,7 @@ alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
 alias gcm='git ci -m'
+alias gcm='git ci -am'
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
@@ -211,3 +212,8 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+gcam() {
+  message="$@"
+  git commit -am $message
+}
